@@ -1,0 +1,4 @@
+framework module DishtrackerCore {
+  header "DishtrackerCore-Swift.h"
+  requires objc
+}

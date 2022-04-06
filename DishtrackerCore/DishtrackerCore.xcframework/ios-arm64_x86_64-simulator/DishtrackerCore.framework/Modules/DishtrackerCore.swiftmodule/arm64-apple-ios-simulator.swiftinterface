@@ -1,0 +1,371 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DishtrackerCore
+import AMPopTip
+import AVFoundation
+import Alamofire
+import CoreMotion
+import Foundation
+import Network
+import Rswift
+import Swift
+import SwiftUI
+import SwipeCellKit
+import UIKit
+import Vision
+import _Concurrency
+public struct Platform {
+  public static var isSimulator: Swift.Bool {
+    get
+  }
+  public static var isDebug: Swift.Bool {
+    get
+  }
+  public static var isAppClip: Swift.Bool {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class PrimaryInteractionButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) final public var theme: DishtrackerCore.Theme? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  public enum Side : Swift.Int {
+    case empty, left, right
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) final public var isPrimary: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var isInteractive: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var imagePosition: DishtrackerCore.PrimaryInteractionButton.Side {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var contentEdgeInsets: UIKit.UIEdgeInsets {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set(contentEdgeInsets)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var titleEdgeInsets: UIKit.UIEdgeInsets {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set(titleEdgeInsets)
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var imageEdgeInsets: UIKit.UIEdgeInsets {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set(imageEdgeInsets)
+  }
+  @objc override final public func awakeFromNib()
+  @objc override final public func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) final public func setImage(image: UIKit.UIImage, imagePosition: DishtrackerCore.PrimaryInteractionButton.Side)
+  @_Concurrency.MainActor(unsafe) @objc override final public func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override final public func contentRect(forBounds bounds: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override final public func titleRect(forContentRect contentRect: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override final public func imageRect(forContentRect contentRect: CoreGraphics.CGRect) -> CoreGraphics.CGRect
+  @objc deinit
+}
+@propertyWrapper public struct UserDefault<T> where T : Swift.Decodable, T : Swift.Encodable {
+  public init(key: Swift.String, defaultValue: T)
+  public var wrappedValue: T {
+    get
+    set
+  }
+}
+public enum LocationResultLoading {
+  case success(DishtrackerCore.Location)
+  case failure(Swift.Error)
+}
+extension UIKit.UIColor {
+  convenience public init?(hexString: Swift.String, transparency: CoreGraphics.CGFloat = 1)
+  public func add(overlay: UIKit.UIColor) -> UIKit.UIColor
+}
+extension UIKit.UIColor {
+  public var color: SwiftUI.Color {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(MotionKit) open class MotionKit : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  open func getAccelerometerValues(_ interval: Foundation.TimeInterval = 0.1, values: ((_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())?)
+  open func getGyroValues(_ interval: Foundation.TimeInterval = 0.1, values: ((_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())?)
+  @available(iOS 5.0, *)
+  open func getMagnetometerValues(_ interval: Foundation.TimeInterval = 0.1, values: ((_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())?)
+  open func getDeviceMotionObject(_ interval: Foundation.TimeInterval = 0.1, values: ((_ deviceMotion: CoreMotion.CMDeviceMotion) -> ())?)
+  open func getAccelerationFromDeviceMotion(_ interval: Foundation.TimeInterval = 0.1, values: ((_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())?)
+  open func getGravityAccelerationFromDeviceMotion(_ interval: Foundation.TimeInterval = 0.1, values: ((_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())?)
+  open func getAttitudeFromDeviceMotion(_ interval: Foundation.TimeInterval = 0.1, values: ((_ attitude: CoreMotion.CMAttitude) -> ())?)
+  open func getRotationRateFromDeviceMotion(_ interval: Foundation.TimeInterval = 0.1, values: ((_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())?)
+  open func getMagneticFieldFromDeviceMotion(_ interval: Foundation.TimeInterval = 0.1, values: ((_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double, _ accuracy: Swift.Int32) -> ())?)
+  open func getAccelerationAtCurrentInstant(_ values: @escaping (_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())
+  open func getGravitationalAccelerationAtCurrentInstant(_ values: @escaping (_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())
+  open func getAttitudeAtCurrentInstant(_ values: @escaping (_ attitude: CoreMotion.CMAttitude) -> ())
+  open func getMageticFieldAtCurrentInstant(_ values: @escaping (_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())
+  open func getGyroValuesAtCurrentInstant(_ values: @escaping (_ x: Swift.Double, _ y: Swift.Double, _ z: Swift.Double) -> ())
+  open func stopAccelerometerUpdates()
+  open func stopGyroUpdates()
+  open func stopDeviceMotionUpdates()
+  @available(iOS 5.0, *)
+  open func stopmagnetometerUpdates()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class FeedbackHelper {
+  final public class func setFeedback(type: UIKit.UINotificationFeedbackGenerator.FeedbackType)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class AlertHelper {
+  final public class func displayAlert(viewController: UIKit.UIViewController, title: Swift.String, message: Swift.String, completion: @escaping (() -> Swift.Void))
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class CapturePreviewView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) final public var videoPreviewLayer: AVFoundation.AVCaptureVideoPreviewLayer {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var session: AVFoundation.AVCaptureSession? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public class var layerClass: Swift.AnyClass {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol NetworkingStateDelegate : AnyObject {
+  func updateNetworkingUIState()
+}
+@_hasMissingDesignatedInitializers final public class NetworkingHandler {
+  weak final public var delegate: DishtrackerCore.NetworkingStateDelegate?
+  public static let shared: DishtrackerCore.NetworkingHandler
+  final public var netOn: Swift.Bool {
+    get
+    set
+  }
+  final public class func createPaymentIntent(checkoutItems: [DishtrackerCore.CheckoutItem], completion: @escaping ((DishtrackerCore.PaymentIntentResultLoading) -> Swift.Void))
+  final public class func addEmailToPaymentIntent(intentId: Swift.String, clientSecret: Swift.String, email: Swift.String, completion: @escaping ((Swift.Bool) -> Swift.Void))
+  final public class func getLocationForIdentifier(locationIdentifier: Foundation.UUID, completion: @escaping ((DishtrackerCore.LocationResultLoading) -> Swift.Void))
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class CheckoutItem : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let product: DishtrackerCore.Product
+  @objc final public var amount: Swift.Int
+  final public func priceWithTax() -> Swift.Double
+  @objc final public var name: Swift.String {
+    @objc get
+  }
+  @objc final public var plu: Swift.String {
+    @objc get
+  }
+  @objc final public var label: Swift.String {
+    @objc get
+  }
+  final public class func aggregateCheckoutItems(checkoutItems: [DishtrackerCore.CheckoutItem]) -> [DishtrackerCore.CheckoutItem]
+  final public class func calculateOrderAmount(checkoutItems: [DishtrackerCore.CheckoutItem]) -> Foundation.NSDecimalNumber
+  final public class func calculateOrderAmountForCheckoutItem(checkoutItem: DishtrackerCore.CheckoutItem) -> Foundation.NSDecimalNumber
+  final public class func calculateOrderAmountForCheckoutItem(checkoutItem: DishtrackerCore.CheckoutItem) -> Swift.Double
+  final public class func getCategoryStringForCheckoutItem(checkoutItem: DishtrackerCore.CheckoutItem) -> Swift.String
+  final public class func getTitleStringForCheckoutItem(checkoutItem: DishtrackerCore.CheckoutItem) -> Swift.String
+  final public class func getDetailStringForCheckoutItem(checkoutItem: DishtrackerCore.CheckoutItem) -> Swift.String
+  final public class func getTotalStringForCheckoutItems(checkoutItems: [DishtrackerCore.CheckoutItem]) -> Swift.String
+  final public class func getCategoryDisplayString(label: Swift.String) -> Swift.String
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+  final public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension Swift.Array where Element == DishtrackerCore.CheckoutItem {
+  public var info: Swift.String {
+    get
+  }
+}
+extension DishtrackerCore.CheckoutItem {
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+}
+public protocol ViewModelBased : AnyObject {
+  associatedtype ViewModel
+  var viewModel: Self.ViewModel! { get set }
+}
+extension DishtrackerCore.ViewModelBased where Self : UIKit.UIViewController {
+  public static func instantiate(with viewModel: Self.ViewModel) -> Self
+}
+extension Swift.String {
+  public func asQRCodeImage(tintColor: UIKit.UIColor) -> UIKit.UIImage
+}
+public enum PaymentIntentResultLoading {
+  case success(DishtrackerCore.PaymentIntentClientSecret)
+  case failure(Swift.Error)
+}
+@objc @objcMembers public class Product : ObjectiveC.NSObject, Swift.Codable, Swift.Identifiable {
+  @objc final public let id: Foundation.UUID
+  @objc final public let label: Swift.String
+  @objc final public let name: Swift.String
+  @objc final public let plu: Swift.String
+  @objc final public let price: Swift.Double
+  @objc final public let tax: Swift.Int
+  @objc public func priceWithTax() -> Swift.Double
+  @objc public func taxPrice() -> Swift.Double
+  @objc public func priceWithoutTax() -> Swift.Double
+  public typealias ID = Foundation.UUID
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension DishtrackerCore.Product {
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+}
+public struct PaymentIntentClientSecret : Swift.Codable {
+  public let intentId: Swift.String
+  public let clientSecret: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers public class Appearance : ObjectiveC.NSObject {
+  public class func applyAppearance(tintColor: UIKit.UIColor)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIColor {
+  convenience public init(light lightModeColor: @autoclosure @escaping () -> UIKit.UIColor, dark darkModeColor: @autoclosure @escaping () -> UIKit.UIColor)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class ProductsDetectorHeaderView : UIKit.UITableViewHeaderFooterView {
+  @_Concurrency.MainActor(unsafe) public static let identifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak final public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak final public var subTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak final public var interactionButton: UIKit.UIButton!
+  public typealias InteractionButtonClicked = () -> Swift.Void
+  @_Concurrency.MainActor(unsafe) final public var clickedHandler: DishtrackerCore.ProductsDetectorHeaderView.InteractionButtonClicked?
+  @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public protocol OrientationLockProtocol {
+  @objc var orientationLock: UIKit.UIInterfaceOrientationMask { get set }
+}
+@_hasMissingDesignatedInitializers final public class OrientationHelper {
+  public static let shared: DishtrackerCore.OrientationHelper
+  final public func update(orientationLocker: DishtrackerCore.OrientationLockProtocol?)
+  final public func lockOrientation(orientation: UIKit.UIInterfaceOrientationMask)
+  final public func lockOrientation(orientation: UIKit.UIInterfaceOrientationMask, andRotateTo rotateOrientation: UIKit.UIInterfaceOrientation)
+  @objc deinit
+}
+@objc final public class Dishtracker : ObjectiveC.NSObject, DishtrackerCore.ShowCheckoutViewControllerProtocol, DishtrackerCore.OrientationLockProtocol {
+  @objc final public var orientationLock: UIKit.UIInterfaceOrientationMask
+  @objc public init(location: DishtrackerCore.Location, application: UIKit.UIApplication, theme: DishtrackerCore.Theme, delegateCheckout: DishtrackerCore.ShowCheckoutViewControllerProtocol?, onCompletion: @escaping ([DishtrackerCore.CheckoutItem]) -> Swift.Void, onCancel: @escaping () -> Swift.Void, onError: @escaping (Swift.Error) -> Swift.Void)
+  @objc final public func start(location: DishtrackerCore.Location? = nil, window: UIKit.UIWindow, options: UIKit.UIView.AnimationOptions = .transitionCrossDissolve, duration: Foundation.TimeInterval = 0.4)
+  @objc final public func cancel()
+  @objc final public func showCheckoutViewController(checkoutItems: [DishtrackerCore.CheckoutItem], image: UIKit.UIImage, location: DishtrackerCore.Location)
+  @objc deinit
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func addSubSwiftUIView<Content>(_ swiftUIView: Content, to view: UIKit.UIView) where Content : SwiftUI.View
+  @_Concurrency.MainActor(unsafe) public func embedInViewController(inViewController parent: UIKit.UIViewController, containerView: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public var topBarHeight: CoreGraphics.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isOnScreen: Swift.Bool {
+    get
+  }
+}
+extension AVFoundation.AVCaptureVideoOrientation {
+  public init?(deviceOrientation: UIKit.UIDeviceOrientation)
+  public init?(interfaceOrientation: UIKit.UIInterfaceOrientation)
+}
+extension QuartzCore.CALayer {
+  public class func addShadowPath(view: UIKit.UIView)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var nib: UIKit.UINib {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func maskView(view: UIKit.UIView, cornerRadius: CoreGraphics.CGFloat = 0.0, inverse: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func addBlurAndVibrancyEffect()
+  @_Concurrency.MainActor(unsafe) public func addToViewAsSubviewWithConstraints(subview: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func isDarkMode() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func setupShadow()
+  @_Concurrency.MainActor(unsafe) public func removeSubviews()
+}
+@objc @_inheritsConvenienceInitializers final public class CameraController : ObjectiveC.NSObject, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  final public class func captureDeviceWithPosition(position: AVFoundation.AVCaptureDevice.Position) throws -> AVFoundation.AVCaptureDevice
+  @objc final public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension DishtrackerCore.CameraController : AVFoundation.AVCapturePhotoCaptureDelegate {
+  @objc final public func photoOutput(_ output: AVFoundation.AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVFoundation.AVCapturePhoto, error: Swift.Error?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class XIBView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func initialize()
+  @objc deinit
+}
+extension Swift.String {
+  public func versionCompare(_ otherVersion: Swift.String) -> Foundation.ComparisonResult
+}
+extension Swift.String : Swift.Error {
+}
+extension Swift.String : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@objc public protocol ShowCheckoutViewControllerProtocol {
+  @objc func showCheckoutViewController(checkoutItems: [DishtrackerCore.CheckoutItem], image: UIKit.UIImage, location: DishtrackerCore.Location)
+  @objc func cancel()
+}
+@objc @objcMembers public class Location : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Foundation.UUID
+  @objc final public let name: Swift.String
+  @objc final public let identifier: Foundation.UUID
+  @objc final public let camera: Foundation.UUID
+  @objc public init(id: Foundation.UUID, name: Swift.String, identifier: Foundation.UUID, camera: Foundation.UUID)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension DishtrackerCore.Location {
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+}
+@objc extension DishtrackerCore.Location {
+  @objc public static let testLocationIdentifier: Foundation.UUID
+  @objc public static let test: DishtrackerCore.Location
+}
+@objc @objcMembers public class Theme : ObjectiveC.NSObject {
+  @objc final public let primary: UIKit.UIColor
+  @objc final public let secondary: UIKit.UIColor
+  @objc final public let disabled: UIKit.UIColor
+  @objc final public let success: UIKit.UIColor
+  @objc final public let info: UIKit.UIColor
+  @objc final public let warning: UIKit.UIColor
+  @objc final public let danger: UIKit.UIColor
+  @objc final public let background: UIKit.UIColor
+  @objc public init(primary: UIKit.UIColor, secondary: UIKit.UIColor, disabled: UIKit.UIColor, success: UIKit.UIColor, info: UIKit.UIColor, warning: UIKit.UIColor, danger: UIKit.UIColor, background: UIKit.UIColor)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class BoundingBoxView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) final public func setup(borderColor: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) @objc override final public func draw(_ rect: CoreGraphics.CGRect)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CustomPopTip : AMPopTip.PopTip {
+  @_Concurrency.MainActor(unsafe) public init(bubbleColor: UIKit.UIColor)
+  @_Concurrency.MainActor public func setupUI(bubbleColor: UIKit.UIColor)
+  @objc deinit
+}
+extension DishtrackerCore.PrimaryInteractionButton.Side : Swift.Equatable {}
+extension DishtrackerCore.PrimaryInteractionButton.Side : Swift.Hashable {}
+extension DishtrackerCore.PrimaryInteractionButton.Side : Swift.RawRepresentable {}
