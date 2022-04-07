@@ -32,3 +32,4 @@ artifacts/
 report.xml
 
 *.generated.swift
+.swiftpm
