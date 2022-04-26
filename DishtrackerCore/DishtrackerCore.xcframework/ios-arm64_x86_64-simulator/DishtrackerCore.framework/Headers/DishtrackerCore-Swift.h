@@ -340,14 +340,6 @@ SWIFT_CLASS("_TtC15DishtrackerCore8Location")
 @end
 
 
-@interface Location (SWIFT_EXTENSION(DishtrackerCore))
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSUUID * _Nonnull testLocationIdentifier;)
-+ (NSUUID * _Nonnull)testLocationIdentifier SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Location * _Nonnull test;)
-+ (Location * _Nonnull)test SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 SWIFT_CLASS_NAMED("MotionKit")
 @interface MotionKit : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -380,11 +372,12 @@ SWIFT_CLASS("_TtC15DishtrackerCore7Product")
 @property (nonatomic, readonly, copy) NSString * _Nonnull label;
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
 @property (nonatomic, readonly, copy) NSString * _Nonnull plu;
-@property (nonatomic, readonly) double price;
-@property (nonatomic, readonly) NSInteger tax;
+- (nonnull instancetype)initWithId:(NSUUID * _Nonnull)id label:(NSString * _Nonnull)label name:(NSString * _Nonnull)name plu:(NSString * _Nonnull)plu price:(double)price tax:(NSInteger)tax OBJC_DESIGNATED_INITIALIZER;
 - (double)priceWithTax SWIFT_WARN_UNUSED_RESULT;
 - (double)taxPrice SWIFT_WARN_UNUSED_RESULT;
 - (double)priceWithoutTax SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -791,14 +784,6 @@ SWIFT_CLASS("_TtC15DishtrackerCore8Location")
 @end
 
 
-@interface Location (SWIFT_EXTENSION(DishtrackerCore))
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSUUID * _Nonnull testLocationIdentifier;)
-+ (NSUUID * _Nonnull)testLocationIdentifier SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Location * _Nonnull test;)
-+ (Location * _Nonnull)test SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 SWIFT_CLASS_NAMED("MotionKit")
 @interface MotionKit : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -831,11 +816,12 @@ SWIFT_CLASS("_TtC15DishtrackerCore7Product")
 @property (nonatomic, readonly, copy) NSString * _Nonnull label;
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
 @property (nonatomic, readonly, copy) NSString * _Nonnull plu;
-@property (nonatomic, readonly) double price;
-@property (nonatomic, readonly) NSInteger tax;
+- (nonnull instancetype)initWithId:(NSUUID * _Nonnull)id label:(NSString * _Nonnull)label name:(NSString * _Nonnull)name plu:(NSString * _Nonnull)plu price:(double)price tax:(NSInteger)tax OBJC_DESIGNATED_INITIALIZER;
 - (double)priceWithTax SWIFT_WARN_UNUSED_RESULT;
 - (double)taxPrice SWIFT_WARN_UNUSED_RESULT;
 - (double)priceWithoutTax SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 

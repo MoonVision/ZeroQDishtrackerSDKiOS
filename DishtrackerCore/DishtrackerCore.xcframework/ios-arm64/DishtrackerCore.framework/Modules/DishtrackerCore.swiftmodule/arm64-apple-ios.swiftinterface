@@ -5,7 +5,9 @@ import AMPopTip
 import AVFoundation
 import Alamofire
 import CoreMotion
+import CoreVideo
 import Foundation
+import Metal
 import Network
 import Rswift
 import Swift
@@ -14,6 +16,7 @@ import SwipeCellKit
 import UIKit
 import Vision
 import _Concurrency
+import simd
 public struct Platform {
   public static var isSimulator: Swift.Bool {
     get
@@ -189,6 +192,9 @@ extension Swift.Array where Element == DishtrackerCore.CheckoutItem {
   public var info: Swift.String {
     get
   }
+  public var jsonString: Swift.String? {
+    get
+  }
 }
 extension DishtrackerCore.CheckoutItem {
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
@@ -212,15 +218,14 @@ public enum PaymentIntentResultLoading {
   @objc final public let label: Swift.String
   @objc final public let name: Swift.String
   @objc final public let plu: Swift.String
-  @objc final public let price: Swift.Double
-  @objc final public let tax: Swift.Int
+  @objc public init(id: Foundation.UUID, label: Swift.String, name: Swift.String, plu: Swift.String, price: Swift.Double = Double.nan, tax: Swift.Int = Int.zero)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
   @objc public func priceWithTax() -> Swift.Double
   @objc public func taxPrice() -> Swift.Double
   @objc public func priceWithoutTax() -> Swift.Double
   public typealias ID = Foundation.UUID
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
 }
 extension DishtrackerCore.Product {
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
@@ -339,10 +344,6 @@ extension Swift.String : Foundation.LocalizedError {
 }
 extension DishtrackerCore.Location {
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
-}
-@objc extension DishtrackerCore.Location {
-  @objc public static let testLocationIdentifier: Foundation.UUID
-  @objc public static let test: DishtrackerCore.Location
 }
 @objc @objcMembers public class Theme : ObjectiveC.NSObject {
   @objc final public let primary: UIKit.UIColor

@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		1VTx04MoL8m41xOKFg9zagECBE0=
+		McaxnPpdl7uy4hnRVIOw5DHGS50=
 		</data>
 		<key>Headers/DishtrackerCore-Swift.h</key>
 		<data>
-		RWXcPFPLSZhU2WVoZHnknOkzL7M=
+		vz9J92vP1QKgxYbyIf4oixXUEfw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rSpHrZG995K3YN6EKZNMCCAasQU=
+		AYrteCdAS2h9/ZmAK1XH8nL5nKQ=
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		h+2asUCuq+EkWiYIYl0pAOcKykw=
+		FHSy2yCyjiuTQc5gbdgtxQf7LE0=
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		AnFff9P1Mjpyf8KX2V5PC0NRK9M=
+		TE79veTU7tykaOUOTndT25aauVo=
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		zYEm/HuPwelONhOF61ny77wUCJg=
+		52dst+OrBb9c/H1zzqVWYKNyxNY=
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0s/QlQf4CBCjsfz1U1tKUqWB4To=
+		k29b7uVVIrixb5jbLprs4yuAe5Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -68,7 +68,7 @@
 		<data>
 		ah7nnAfTUd1N2o2ISCEt+AH8Xx8=
 		</data>
-		<key>de.lproj/CoreLocalizable.strings</key>
+		<key>de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -77,7 +77,7 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>de.lproj/CoreLocalizable.stringsdict</key>
+		<key>de.lproj/Localizable.stringsdict</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -86,7 +86,7 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en.lproj/CoreLocalizable.strings</key>
+		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -95,7 +95,7 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en.lproj/CoreLocalizable.stringsdict</key>
+		<key>en.lproj/Localizable.stringsdict</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -111,14 +111,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vfPgZsO5pHe+n6iGgliK4MIK0+Hy9UgupNxoTvNQJ34=
+			vfZM1wCPjzuZCJShYUZwiJk54O4ppW24DSiliclC9Ic=
 			</data>
 		</dict>
 		<key>Headers/DishtrackerCore-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tqLfwkDbx6MFCOadXUaatADlilluk3Qn1wk7fC6VX8k=
+			7RG3Z/zriUzrjgEjlbo7IfuUm/WWKnwsyfSoGPlhNY0=
 			</data>
 		</dict>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -132,14 +132,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0YFxu/QJKYRh3yYpLv8BYJxv5XJKHrY7vXhYLjikUFc=
+			pLpoKEvmuSbpF6+2EIRbd8WGqAL+spl484YX3G4FwHk=
 			</data>
 		</dict>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KQPa0En1YNLDU0ocjxocIhqFyYoeiDeCLAzR/xZXW00=
+			EXGRmSWs+Gmhk1dMvhJwJAcM7pvEeLCfksXm5GGKXgU=
 			</data>
 		</dict>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -153,14 +153,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			102i80s/uAKTm4d0wUazTqaZNGWr3yYzgNgwkdzT9NY=
+			wpJWKcRdCJ5ANhrh5caCrfInZCN1eY180nJiA4qey3Y=
 			</data>
 		</dict>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kkLVRs8Jz63/kvBfeViym+iFayr8I6hR+qWrCCHdthI=
+			WyOXSSYaYxUK+aZeQciU7vjgFih9kCB/oER6hShgCvY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -212,7 +212,7 @@
 			5gOpgM42fm3eoHOeXzZ6zVEscf269QWlwR1kEtUbcbo=
 			</data>
 		</dict>
-		<key>de.lproj/CoreLocalizable.strings</key>
+		<key>de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -221,7 +221,7 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>de.lproj/CoreLocalizable.stringsdict</key>
+		<key>de.lproj/Localizable.stringsdict</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -230,7 +230,7 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en.lproj/CoreLocalizable.strings</key>
+		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -239,7 +239,7 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en.lproj/CoreLocalizable.stringsdict</key>
+		<key>en.lproj/Localizable.stringsdict</key>
 		<dict>
 			<key>hash2</key>
 			<data>

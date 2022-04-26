@@ -20,7 +20,7 @@ See LICENSE for the evaluation license. By downloading and installing Dishtracke
 To get started with Dishtracker we suggest reading the [DishtrackerSDK Example](https://github.com/MoonVision/ZeroQDishtrackerSDKiOSExample).
 
 DishtrackerSDK comes with one dynamic frameworks (DishtrackerCore.xcframework).
-DishtrackerSDK is compatible with iOS 14 and 15 and Xcode 13.3.0+.
+DishtrackerSDK is compatible with iOS 14 and 15 and Xcode 13.3.1+.
 
 ## Support
 
