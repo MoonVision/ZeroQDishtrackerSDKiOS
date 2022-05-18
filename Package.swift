@@ -17,7 +17,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire", .upToNextMajor(from: "5.5.0")),
+        .package(url: "https://github.com/Alamofire/Alamofire", .upToNextMajor(from: "5.6.1")),
         .package(url: "https://github.com/mac-cain13/R.swift.Library", .upToNextMajor(from: "5.4.0")),
         .package(url: "https://github.com/SwipeCellKit/SwipeCellKit", .upToNextMajor(from: "2.7.1")),
         .package(url: "https://github.com/andreamazz/AMPopTip", .upToNextMajor(from: "4.4.0"))

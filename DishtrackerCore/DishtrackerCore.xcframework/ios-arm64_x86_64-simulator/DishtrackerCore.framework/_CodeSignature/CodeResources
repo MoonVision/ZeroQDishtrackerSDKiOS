@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		McaxnPpdl7uy4hnRVIOw5DHGS50=
+		z2/Wjt3ouqeumMNyno7p/LJj/PQ=
 		</data>
 		<key>Headers/DishtrackerCore-Swift.h</key>
 		<data>
-		vz9J92vP1QKgxYbyIf4oixXUEfw=
+		y6oKKqUZPAg0ENKMQEctUJLdrFM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		AYrteCdAS2h9/ZmAK1XH8nL5nKQ=
+		KwKJb6JwxV+rHb3T3/gkX3cHCN0=
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FHSy2yCyjiuTQc5gbdgtxQf7LE0=
+		XSkyz5nMVS7u9C4Sb2gKJ5gTbOg=
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TE79veTU7tykaOUOTndT25aauVo=
+		Q8I3BrCEhB54KmB1Tb27zyVe8FA=
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		52dst+OrBb9c/H1zzqVWYKNyxNY=
+		/stdDm/8r+5qPG9irnyFatp6kxM=
 		</data>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		k29b7uVVIrixb5jbLprs4yuAe5Q=
+		FqhKJAzC47MkJLtrwLJytLgF1w8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -111,14 +111,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vfZM1wCPjzuZCJShYUZwiJk54O4ppW24DSiliclC9Ic=
+			j2B4N4VUX5gbuu/AHpEaVWLuC502fwkODU1dw8sEPQY=
 			</data>
 		</dict>
 		<key>Headers/DishtrackerCore-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7RG3Z/zriUzrjgEjlbo7IfuUm/WWKnwsyfSoGPlhNY0=
+			dswYOqYVthdw52bJtA3YprKEyR9/VGfeJhx6DJBMOvU=
 			</data>
 		</dict>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -132,14 +132,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pLpoKEvmuSbpF6+2EIRbd8WGqAL+spl484YX3G4FwHk=
+			QRTjEAXcYZgPp7N+LtdoulYAJ2hmhsEEgKUk69yiDTU=
 			</data>
 		</dict>
 		<key>Modules/DishtrackerCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EXGRmSWs+Gmhk1dMvhJwJAcM7pvEeLCfksXm5GGKXgU=
+			JRjTo9V4PN4O893e2ib9rvd7yeVVsvLUC4XwAaLeVbU=
 			</data>
 		</dict>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -153,14 +153,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wpJWKcRdCJ5ANhrh5caCrfInZCN1eY180nJiA4qey3Y=
+			lsv7INhIrflWj/H4VFv09i/BgM/btYrO/8ZfWYXtdEY=
 			</data>
 		</dict>
 		<key>Modules/DishtrackerCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WyOXSSYaYxUK+aZeQciU7vjgFih9kCB/oER6hShgCvY=
+			EO6kagbPjXKLt3Ux42HQA9ZHf3944IpZJZrT14UZOac=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -84,6 +84,10 @@ public struct Platform {
     set
   }
 }
+public enum ProductsResultLoading {
+  case success([DishtrackerCore.Product])
+  case failure(Swift.Error)
+}
 public enum LocationResultLoading {
   case success(DishtrackerCore.Location)
   case failure(Swift.Error)
@@ -154,6 +158,7 @@ public protocol NetworkingStateDelegate : AnyObject {
     get
     set
   }
+  final public class func getProducts(location: DishtrackerCore.Location, completion: @escaping ((DishtrackerCore.ProductsResultLoading) -> Swift.Void))
   final public class func createPaymentIntent(checkoutItems: [DishtrackerCore.CheckoutItem], completion: @escaping ((DishtrackerCore.PaymentIntentResultLoading) -> Swift.Void))
   final public class func addEmailToPaymentIntent(intentId: Swift.String, clientSecret: Swift.String, email: Swift.String, completion: @escaping ((Swift.Bool) -> Swift.Void))
   final public class func getLocationForIdentifier(locationIdentifier: Foundation.UUID, completion: @escaping ((DishtrackerCore.LocationResultLoading) -> Swift.Void))
@@ -214,17 +219,17 @@ public enum PaymentIntentResultLoading {
   case failure(Swift.Error)
 }
 @objc @objcMembers public class Product : ObjectiveC.NSObject, Swift.Codable, Swift.Identifiable {
-  @objc final public let id: Foundation.UUID
+  @objc final public let id: Swift.String
   @objc final public let label: Swift.String
   @objc final public let name: Swift.String
   @objc final public let plu: Swift.String
-  @objc public init(id: Foundation.UUID, label: Swift.String, name: Swift.String, plu: Swift.String, price: Swift.Double = Double.nan, tax: Swift.Int = Int.zero)
+  @objc public init(id: Swift.String, label: Swift.String, name: Swift.String, plu: Swift.String)
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc public func priceWithTax() -> Swift.Double
   @objc public func taxPrice() -> Swift.Double
   @objc public func priceWithoutTax() -> Swift.Double
-  public typealias ID = Foundation.UUID
+  public typealias ID = Swift.String
   @objc deinit
 }
 extension DishtrackerCore.Product {
@@ -270,7 +275,7 @@ extension UIKit.UIColor {
 @objc final public class Dishtracker : ObjectiveC.NSObject, DishtrackerCore.ShowCheckoutViewControllerProtocol, DishtrackerCore.OrientationLockProtocol {
   @objc final public var orientationLock: UIKit.UIInterfaceOrientationMask
   @objc public init(location: DishtrackerCore.Location, application: UIKit.UIApplication, theme: DishtrackerCore.Theme, delegateCheckout: DishtrackerCore.ShowCheckoutViewControllerProtocol?, onCompletion: @escaping ([DishtrackerCore.CheckoutItem]) -> Swift.Void, onCancel: @escaping () -> Swift.Void, onError: @escaping (Swift.Error) -> Swift.Void)
-  @objc final public func start(location: DishtrackerCore.Location? = nil, window: UIKit.UIWindow, options: UIKit.UIView.AnimationOptions = .transitionCrossDissolve, duration: Foundation.TimeInterval = 0.4)
+  @objc final public func start(location: DishtrackerCore.Location? = nil, products: [DishtrackerCore.Product], window: UIKit.UIWindow, options: UIKit.UIView.AnimationOptions = .transitionCrossDissolve, duration: Foundation.TimeInterval = 0.4)
   @objc final public func cancel()
   @objc final public func showCheckoutViewController(checkoutItems: [DishtrackerCore.CheckoutItem], image: UIKit.UIImage, location: DishtrackerCore.Location)
   @objc deinit

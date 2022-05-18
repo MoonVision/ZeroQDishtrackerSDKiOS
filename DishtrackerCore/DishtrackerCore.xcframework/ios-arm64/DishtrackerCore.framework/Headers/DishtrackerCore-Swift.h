@@ -312,7 +312,7 @@ SWIFT_CLASS("_TtC15DishtrackerCore11Dishtracker")
 @interface Dishtracker : NSObject <OrientationLockProtocol, ShowCheckoutViewControllerProtocol>
 @property (nonatomic) UIInterfaceOrientationMask orientationLock;
 - (nonnull instancetype)initWithLocation:(Location * _Nonnull)location application:(UIApplication * _Nonnull)application theme:(Theme * _Nonnull)theme delegateCheckout:(id <ShowCheckoutViewControllerProtocol> _Nullable)delegateCheckout onCompletion:(void (^ _Nonnull)(NSArray<CheckoutItem *> * _Nonnull))onCompletion onCancel:(void (^ _Nonnull)(void))onCancel onError:(void (^ _Nonnull)(NSError * _Nonnull))onError OBJC_DESIGNATED_INITIALIZER;
-- (void)startWithLocation:(Location * _Nullable)location window:(UIWindow * _Nonnull)window options:(UIViewAnimationOptions)options duration:(NSTimeInterval)duration;
+- (void)startWithLocation:(Location * _Nullable)location products:(NSArray<Product *> * _Nonnull)products window:(UIWindow * _Nonnull)window options:(UIViewAnimationOptions)options duration:(NSTimeInterval)duration;
 - (void)cancel;
 - (void)showCheckoutViewControllerWithCheckoutItems:(NSArray<CheckoutItem *> * _Nonnull)checkoutItems image:(UIImage * _Nonnull)image location:(Location * _Nonnull)location;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -366,11 +366,11 @@ SWIFT_CLASS("_TtC15DishtrackerCore24PrimaryInteractionButton")
 
 SWIFT_CLASS("_TtC15DishtrackerCore7Product")
 @interface Product : NSObject
-@property (nonatomic, readonly, copy) NSUUID * _Nonnull id;
+@property (nonatomic, readonly, copy) NSString * _Nonnull id;
 @property (nonatomic, readonly, copy) NSString * _Nonnull label;
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
 @property (nonatomic, readonly, copy) NSString * _Nonnull plu;
-- (nonnull instancetype)initWithId:(NSUUID * _Nonnull)id label:(NSString * _Nonnull)label name:(NSString * _Nonnull)name plu:(NSString * _Nonnull)plu price:(double)price tax:(NSInteger)tax OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id label:(NSString * _Nonnull)label name:(NSString * _Nonnull)name plu:(NSString * _Nonnull)plu OBJC_DESIGNATED_INITIALIZER;
 - (double)priceWithTax SWIFT_WARN_UNUSED_RESULT;
 - (double)taxPrice SWIFT_WARN_UNUSED_RESULT;
 - (double)priceWithoutTax SWIFT_WARN_UNUSED_RESULT;
